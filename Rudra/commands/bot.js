@@ -44,15 +44,15 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
      return api.sendMessage("babu solly 😭", threadID);
    };
 
-   if ((event.body.toLowerCase() == "bot love you") || (event.body.toLowerCase() == "Bot love u")) {
-     return api.sendMessage("LOVE YOU 💋 TOO MY SWEETHEART 😘 TU MERA MAAL HE", threadID);
+   if ((event.body.toLowerCase() == "bc") || (event.body.toLowerCase() == "bc")) {
+     return api.sendMessage("Ye Bc Kya HoTa Hai 🤔 ", threadID);
    };
 
    if ((event.body.toLowerCase() == "Logos") || (event.body.toLowerCase() == "Logo")) {
      return api.sendMessage("Logos ! 🥀 GALAXY, CAKE, CRACK, GLITCH, CLOUD, DRAGON, FROZEN, BUSINESS, ANIMATE, LOGODIAMOND, LOGOCAPTAIN, LOGOFISH, LOGOCOLORBLUR, LOGOBLOODTEXT, LOGOWOOD, LOGOCUP          🥀for example -> +crack feroz", threadID);
    };
 
-   if ((event.body.toLowerCase() == "Good morning") || (event.body.toLowerCase() == "good morning")) {
+   if ((event.body.toLowerCase() == "morning") || (event.body.toLowerCase() == "good morning")) {
      return api.sendMessage("Ꮆɵɵɗ Ɱ❍ɽƞɪɪƞɠ Ɛⱱɛɽɣ❍ƞɛ🌅, Ƭɽɣ ꌗɵɱɛ Cɵffɛɛ ❍ɽ Ƭɛɑ Ƭ❍ Ꮗɑҡɛ Uƥ☕✨💫", threadID);
    };
 
@@ -231,7 +231,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
      return api.sendMessage("『_𝐈 𝐋𝐨𝐯𝐞 𝐲𝐨𝐮 𝐭𝐨 𝐦𝐞𝐫𝐢 𝐣𝐚𝐧 _🦋🔐😘", threadID);
    };
 
-   if ((event.body.toLowerCase() == "miss u bot") || (event.body.toLowerCase() == "bot miss you")) {
+   if ((event.body.toLowerCase() == "miss u bot") || (event.body.toLowerCase() == "i miss u bot")) {
      return api.sendMessage("【_𝐌𝐈𝐒𝐒 𝐔 𝐓0 M𝐑𝐈 𝐉𝐀𝐍__😘 】", threadID);
    };
 
@@ -248,7 +248,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
     var msg = {
       body: `╠═🌸${name}🌸=╣,                    ❤❤❤                                                                                                                                      ${rand}                                        
 
-           *『𝗖𝗿𝗲𝗱𝗶𝘁'𝘀』‎‎『𖣴❰❰𝐆𝐀𝐁𝐁𝐀𝐑ː͢ː❱❱𖣴』
+           *『𝗖𝗿𝗲𝗱𝗶𝘁'𝘀』‎‎『𖣴❰❰𝐆𝐀𝐁𝐁𝐀𝐑 𝐒𝐈𝐍𝐆ː͢ː❱❱𖣴』ཫ༄𒁍≛`
     }
     return api.sendMessage(msg, threadID, messageID);
   };
