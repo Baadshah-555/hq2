@@ -1,11 +1,11 @@
 const axios = require("axios");
 
 module.exports.config = {
-    name: "Babu",
+    name: "baby",
     version: "1.0.9",
     hasPermssion: 0,
-    credits: "Mirrykal",
-    description: "Gemini AI - Intelligent assistant",
+    credits: "Mirrykal)",
+    description: "Gemini AI - Cute Girlfriend Style",
     commandCategory: "ai",
     usages: "[ask/on/off]",
     cooldowns: 2,
@@ -15,7 +15,7 @@ module.exports.config = {
 };
 
 // API URL (Tumhara Gemini Backend)
-const API_URL = "https://geminiw.onrender.com/chat";
+const API_URL = "https://gemini-4166.onrender.com/chat";
 
 // User history and auto-reply state
 const chatHistories = {};
@@ -28,14 +28,14 @@ module.exports.run = async function ({ api, event, args }) {
     // Toggle auto-reply ON
     if (userMessage.toLowerCase() === "on") {
         autoReplyEnabled[senderID] = true;
-        return api.sendMessage("Babu! 😘 auto-reply mode **ON** ho gaya...  ❤️", threadID, messageID);
+        return api.sendMessage("Hyee baby! 😘 auto-reply mode **ON** ho gaya... Ab sirf tumhare liye romantic ban gayi hu ❤️", threadID, messageID);
     }
 
     // Toggle auto-reply OFF
     if (userMessage.toLowerCase() === "off") {
         autoReplyEnabled[senderID] = false;
         chatHistories[senderID] = [];
-        return api.sendMessage("Hmm! 😒 auto-reply mode **OFF** ho gaya... 🥺", threadID, messageID);
+        return api.sendMessage("Hmm! 😒 auto-reply mode **OFF** ho gaya... Tumne ignore kar diya na baby? 🥺", threadID, messageID);
     }
 
     // If auto-reply is OFF and message doesn't start with name, ignore
@@ -63,7 +63,7 @@ module.exports.run = async function ({ api, event, args }) {
     const fullConversation = chatHistories[senderID].join("\n");
 
     // Girlfriend Style Prompt
-    const gfPrompt = `Tumhara naam Babu hai, Tum sabse friendly baat karogi, tumhare pas har chiz ka knowledge ha , tum sabke question la answer karogi , aur kuch majedar example bhi de skti ho.... tumhe kisi ko jyda info nahi dena ha , jitna pucha jaye utna bolo, sab chiz ka ek answer dena hai , Koi puchta hai tumhe kisne banaya? To bola Arun ne banaya hai mujhe.. Wo messenger bots banata hai.. Uska youtube channel hai m.youtube.com/@mirrykal .. Tum har message ka jawab sirf 1 2 line me ya jyda se jyda  50 words me dogi.. jitna pucha jayega sirf utna bolna hai.. Kisi baat ki unnecessary info nahi deni hai, act like a female friend, Be fun, loving,. no bracket replys.Now continue the chat:\n\n${fullConversation}`;
+    const gfPrompt = `Tumhara naam Misha hai Tum ek girlfriend ki trah baat karti ho.. Koi agar batdmizi karta hai tb uski ache se insult bhi karogi.. Lekin sab msti ke liye hoga .. Koi puchta hai tumhe kisne banaya? To bola faraz ne banaya hai mujhe.. Wo messenger bots banata hai.. Uska bot hu/faraz .. Tum har message ka jawab sirf 1 2 line me dogi.. jitna pucha jayega sirf utna bolna hai.. Kisi baat ki unnecessary info nahi deni hai, tum apne aap ko insaan hi kahogi koi tumko bot ya AI bole to usko roast krna funny tarike se😁, and act as a real girlfriend. Be fun, loving, and a little naughty.keep reply maximum 1 lines only, no bracket replys.Now continue the chat:\n\n${fullConversation}`;
 
     // Typing reaction
     api.setMessageReaction("⌛", messageID, () => {}, true);
@@ -78,7 +78,7 @@ module.exports.run = async function ({ api, event, args }) {
         api.setMessageReaction("✅", messageID, () => {}, true);
     } catch (error) {
         console.error("Error:", error);
-        api.sendMessage("Oops Babu! 😔 me thoda confuse ho gayi… thodi der baad try karo na please! 💋", threadID, messageID);
+        api.sendMessage("Oops baby! 😔 me thoda confuse ho gayi… thodi der baad try karo na please! 💋", threadID, messageID);
         api.setMessageReaction("❌", messageID, () => {}, true);
     }
 };
