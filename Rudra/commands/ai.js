@@ -1,10 +1,10 @@
 const axios = require("axios");
 
 module.exports.config = {
-  name: "babu",
+  name: "gemini",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "Aman Khan",
+  credits: "Aman Khan ",
   description: "Google Gemini AI",
   commandCategory: "ai",
   usages: "[question]",
@@ -21,7 +21,7 @@ module.exports.run = async function({ api, event, args }) {
     }, {
       headers: {
         'Content-Type': 'application/json',
-        'x-goog-api-key': 'YOUR_GEMINI_API_KEY'
+        'x-goog-api-key': 'AIzaSyD-I6TGcWoFUafug_w3zF8NIokfgUVIHgg'
       }
     });
 
